@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-layout-demo01</title>
+  <link rel="stylesheet" href="./reset.css">
+  <style>
+    .app {
+      grid-template-columns: 1fr 100px 3fr;
+    }
+    .item {
+      color: white;
+      font-weight: bolder;
+      padding: 10px;
+    }
+    .container1 {
+      display: inline-grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item red">1</div>
+    <div class="item green">2</div>
+    <div class="item blue">3</div>
+    <div class="item pink">4</div>
+    <div class="item orange">5</div>
+  </div>
+  <span>右边是一个内联网格容器</span>
+  <div class="container1">
+    <div class="item red">1</div>
+    <div class="item green">2</div>
+    <div class="item blue">3</div>
+    <div class="item pink">4</div>
+    <div class="item orange">5</div>
+  </div>
+</body>
+</html>
