@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-layout-demo04</title>
+  <link rel="stylesheet" href="./reset.css">
+  <style>
+    .item {
+      color: white;
+      font-size: 30px;
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 60px 200px 60px;
+      grid-template-areas:
+        "top top top"
+        "aside main main"
+        "bottom bottom bottom";
+
+    }
+
+    .container>*,
+    .container1>* {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    header {
+      grid-area: top;
+    }
+
+    aside {
+      grid-area: aside;
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    footer {
+      grid-area: bottom;
+    }
+
+
+
+
+    .container1 {
+      display: grid;
+      grid-template-columns: 200px 1fr 1fr;
+      grid-template-rows: 60px 200px 60px;
+      grid-template-areas:
+        "top top top"
+        "aside main main"
+        "aside bottom bottom";
+      border: 5px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="red">header</header>
+    <aside class="pink">aside</aside>
+    <main class="orange">main</main>
+    <footer class="blue">footer</footer>
+  </div>
+  <div class="container1">
+    <header class="red">header</header>
+    <aside class="pink">aside</aside>
+    <main class="orange">main</main>
+    <footer class="blue">footer</footer>
+  </div>
+  <!-- <div class="container container1">
+    <div class="item red">1</div>
+    <div class="item green">2</div>
+    <div class="item blue">3</div>
+    <div class="item pink">4</div>
+    <div class="item orange">5</div>
+    <div class="item red">6</div>
+    <div class="item green">7</div>
+    <div class="item blue">8</div>
+    <div class="item pink">9</div>
+  </div>
+  <div class="container container2">
+    <div class="item red">1</div>
+    <div class="item green">2</div>
+    <div class="item blue">3</div>
+    <div class="item pink">4</div>
+    <div class="item orange">5</div>
+    <div class="item red">6</div>
+    <div class="item green">7</div>
+    <div class="item blue">8</div>
+    <div class="item pink">9</div>
+  </div>
+  <div class="container container3">
+    <div class="item red">1</div>
+    <div class="item green">2</div>
+    <div class="item blue">3</div>
+    <div class="item pink">4</div>
+    <div class="item orange">5</div>
+    <div class="item red">6</div>
+    <div class="item green">7</div>
+    <div class="item blue">8</div>
+    <div class="item pink">9</div>
+  </div> -->
+</body>
+
+</html>
